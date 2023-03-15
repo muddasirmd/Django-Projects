@@ -10,6 +10,14 @@
     </head>
     <body>
         <h2>Article List</h2>
-        
+        <div class="articles">
+            {% for article in articles %}
+            <div class="article">
+                <h3><a href="#">{{ article.title }}</a></h3>
+                <p>{{ article.body }}</p>
+                <p>{{ article.date }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
