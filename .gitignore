@@ -6,3 +6,7 @@ django-blog/blog/__pycache__
 /django-blog/Lib/
 /django-blog/Scripts/
 /django-blog/pyvenv.cfg
+/django-blog/articles/__pycache__
+/django-blog/blog/__pycache__
+/django-blog/db.sqlite3
+/django-blog/accounts/__pycache__
