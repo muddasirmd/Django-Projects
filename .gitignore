@@ -10,3 +10,4 @@ django-blog/blog/__pycache__
 /django-blog/blog/__pycache__
 /django-blog/db.sqlite3
 /django-blog/accounts/__pycache__
+/django-blog/accounts/migrations/__pycache__
