@@ -11,8 +11,10 @@
     </head>
     <body>
         <div class="wrapper">
-            <h1><a href=" {% url 'articles:list' %} "> <img src=" {% static 'logo.png' %}" /> </a></h1>
-            <div>{{ user }}</div>
+            <h1><a href=" {% url 'home' %} "> <img src=" {% static 'logo.png' %}" /> </a></h1>
+            {% if not user.is_anonymous %}
+                <div>{{ user }}</div>
+            {% endif %}
             <nav>
                 <ul>
                     {% if user.is_authenticated %}

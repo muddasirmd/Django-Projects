@@ -19,10 +19,11 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
+from articles import views as article_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homePage),
+    path('', article_views.article_list, name="home"),
     path('about/', views.about),
     path('articles/', include('articles.urls')),
     path('accounts/', include('accounts.urls')),
