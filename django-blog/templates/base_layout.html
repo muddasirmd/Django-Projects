@@ -10,11 +10,11 @@
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
-        <div class="wrapper">
+        <header class="wrapper">
             <h1><a href=" {% url 'home' %} "> <img src=" {% static 'logo.png' %}" /> </a></h1>
-            {% if not user.is_anonymous %}
+            {% comment %} {% if not user.is_anonymous %}
                 <div>{{ user }}</div>
-            {% endif %}
+            {% endif %} {% endcomment %}
             <nav>
                 <ul>
                     {% if user.is_authenticated %}
@@ -31,9 +31,12 @@
                     {% endif %}
                 </ul>
             </nav>
+        </header>
+        <div class="wrapper">
             {% block content %}
 
             {% endblock %}
         </div>
+        
     </body>
 </html>
