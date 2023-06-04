@@ -4,7 +4,7 @@ from django.db import models
 class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
-    body = models.TextField()
+    body = models.TextField(blank=True)
     date = models.DateTimeField(auto_now_add=True)
     thumb = models.ImageField(default='default.png', blank=True)
     
