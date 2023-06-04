@@ -2,4 +2,9 @@
 
 {% block content %}
 <h1>Create an Awesome Article Here</h1>
+<form class="site-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Create">
+</form>
 {% endblock  %}
